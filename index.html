@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kambaiz Rafi's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Kambaiz Rafi</h1>
+        <div id="menu-icon" onclick="toggleNav()">
+            &#9776;
+            <span id="menu-text">Menu</span>
+        </div>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="cv.html" download="kambaiz-cv.pdf">Curricuum vitae</a>
+
+        <!-- Articles without icon -->
+        <div class="submenu" onclick="toggleSubMenu('articles-submenu')">
+            <button class="submenu-btn">Articles</button>
+            <ul class="submenu-content" id="articles-submenu">
+                <li><a href="articles-english.html">English Articles</a></li>
+                <li><a href="articles-persian.html">Persian Articles</a></li>
+            </ul>
+        </div>
+
+        <a href="books.html">Books</a>
+        <a href="contact.html">Contact Me</a>
+    </nav>
+
+ <div id="content">
+        <div class="content-box">
+		<link rel="stylesheet" href="styles.css">
+            <!-- Add more space at the bottom for additional text -->
+           <div class="image-container">
+			<img src="indexPic.jpg" alt="Kambaiz Rafi" >
+			<div class="text-next-to-image">
+				<!-- Your text goes here -->
+				 <p>I am Teaching Fellow in Comparative Politics of Development at the School of Government and International Affairs <a href = "https://www.durham.ac.uk/departments/academic/school-government-international-affairs/">(SGIA)</a>, Durham University. Before that, I was Economic and Social Research Council <a href = "https://www.ukri.org/opportunity/esrc-postdoctoral-fellowships/">(ESRC)</a> Postdoctoral Research Fellow at the School of Oriental and African Studies, University of London. I hold a Ph.D. from the Bartlett Development Planning Unit, University College London. </p>
+			     <p>My research focuses on institutions and economic development,  political economy of development, economic resource allocation, and challenges to statebuilding </p>
+				 <p>I authored a <a href = "https://link.springer.com/book/10.1007/978-3-030-98407-6">book</a> in 2022 on the economy of a post-conflict internationalized statebuilding. It examines the reconstruction of Afghanistan’s economy during the US-led international intervention. Applying an institutionalist framework and based on extensive empirical data, it focuses on resource allocation by private individuals in manufacturing activities. In other research, I have focused on the political economy of post-conflict statebuilding, policy responsiveness of international financial institutions in conflict-affected environments, the semantics of development policy discourse and labour recruitment in a nascent market-capitalist economy. </p>
+				 <p>I also supervise eight undergraduate dissertations. </p>
+				 <p>In 2023-2024, I teach and lead seminars in the following modules at SGIA, Durham University: </p>			
+				 
+				 <ul>	 
+					<li><a href ="https://apps.dur.ac.uk/faculty.handbook/2023/UG/module/SGIA1191">SGIA1191</a> – Democratic Political Systems</li>
+					<li><a href ="https://apps.dur.ac.uk/faculty.handbook/2020/UG/module/SGIA3681">SGIA3681</a> – Poverty or Prosperity? The Political Economy of Development</li>
+					<li><a href = "https://apps.dur.ac.uk/faculty.handbook/2021/PG/module/SGIA49915">SGIA49915</a> – Quantitative Methods and Analysis</li>
+					<li><a href = "https://apps.dur.ac.uk/faculty.handbook/2022/UG/module/SGIA2341">SGIA2341</a> – Research Project </li>
+					<li><a href = "https://apps.dur.ac.uk/faculty.handbook/2022/UG/module/SGIA1201">SGIA1201</a> – Researching Politics and International Relations</li>
+				  </ul>
+				
+			</div>
+</div>
+        </div>
+    </div>
+
+     <script>
+        function toggleNav() {
+            var nav = document.querySelector("nav");
+            var menuIcon = document.getElementById("menu-icon");
+            var content = document.getElementById("content");
+
+            if (nav.style.width === '200px') {
+                nav.style.width = '0';
+                menuIcon.classList.remove("close-icon");
+                content.style.marginLeft = '0';
+            } else {
+                nav.style.width = '200px';
+                menuIcon.classList.add("close-icon");
+                content.style.marginLeft = '200px';
+            }
+        }
+
+        function toggleSubMenu(submenuId) {
+            var submenu = document.getElementById(submenuId);
+            submenu.classList.toggle("active");
+        }
+    </script>
+
+</body>
+</html>

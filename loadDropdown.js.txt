@@ -1,0 +1,14 @@
+// loadDropdown.js
+
+document.addEventListener("DOMContentLoaded", function () {
+    const container = document.getElementById('dropdown-container');
+
+    // Fetch the dropdown HTML
+    fetch('dropdown.html')
+        .then(response => response.text())
+        .then(data => {
+            // Insert the dropdown HTML into the container
+            container.innerHTML = data;
+        })
+        .catch(error => console.error('Error loading dropdown:', error));
+});

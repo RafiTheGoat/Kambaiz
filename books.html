@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Books Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+        <h1>Kambaiz Rafi</h1>
+        <div id="menu-icon" onclick="toggleNav()">
+            &#9776;
+            <span id="menu-text">Menu</span>
+        </div>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="cv.html" download="kambaiz-cv.pdf">Curricuum vitae</a>
+
+        <!-- Articles without icon -->
+        <div class="submenu" onclick="toggleSubMenu('articles-submenu')">
+            <button class="submenu-btn">Articles</button>
+            <ul class="submenu-content" id="articles-submenu">
+                <li><a href="articles-english.html">English Articles</a></li>
+                <li><a href="articles-persian.html">Persian Articles</a></li>
+            </ul>
+        </div>
+
+        <a href="books.html">Books</a>
+        <a href="contact.html">Contact Me</a>
+    </nav>
+
+    <div id="content">
+        <!-- Other content on the Books page -->
+
+        <!-- About This Book Section -->
+        <section class="about-book">
+            <h2>About This Book</h2>
+            <div class="book-description">
+                <img src="Cover.jpeg" alt="Book Image">
+                <p>
+                    This book examines the reconstruction of Afghanistan’s economy during the US and international occupation of the country between 2001 and 2021. 
+					Applying an institutionalist framework and based on extensive empirical data, it focuses on resource allocation by private individuals in manufacturing activities. 
+					As such, market-oriented policy adopted in this period is analysed to highlight its suitability in such a context for achieving relatively better and more productive resource allocation.
+                    The book underscores ‘socially contingent knowledge’ and its role in private resource allocation where the private sector’s involvement is fledgling, bringing out the limitations and possibilities that this feature entails.
+					It raises important questions and deals with problems that are relevant to contemporary debates in economics and political economy of development.
+                </p>
+            </div>
+            <div class="buy-link">
+                <a href="https://link.springer.com/book/10.1007/978-3-030-98407-6" target="_blank">More Information</a>
+            </div>
+        </section>
+    </div>
+
+   <script>
+        function toggleNav() {
+            var nav = document.querySelector("nav");
+            var menuIcon = document.getElementById("menu-icon");
+            var content = document.getElementById("content");
+
+            if (nav.style.width === '200px') {
+                nav.style.width = '0';
+                menuIcon.classList.remove("close-icon");
+                content.style.marginLeft = '0';
+            } else {
+                nav.style.width = '200px';
+                menuIcon.classList.add("close-icon");
+                content.style.marginLeft = '200px';
+            }
+        }
+
+        function toggleSubMenu(submenuId) {
+            var submenu = document.getElementById(submenuId);
+            submenu.classList.toggle("active");
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Kambaiz Rafi</h1>
+        <div id="menu-icon" onclick="toggleNav()">
+            &#9776;
+            <span id="menu-text">Menu</span>
+        </div>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="cv.html" download="kambaiz-cv.pdf">Curricuum vitae</a>
+
+        <!-- Articles without icon -->
+        <div class="submenu" onclick="toggleSubMenu('articles-submenu')">
+            <button class="submenu-btn">Articles</button>
+            <ul class="submenu-content" id="articles-submenu">
+                <li><a href="articles-english.html">English Articles</a></li>
+                <li><a href="articles-persian.html">Persian Articles</a></li>
+            </ul>
+        </div>
+
+        <a href="books.html">Books</a>
+        <a href="contact.html">Contact Me</a>
+    </nav>
+
+    <div id="content">
+        <h2>Contact Me</h2>
+
+        <!-- Contact Information -->
+        <div class="contact-info">
+            <div class="contact-item">
+                <h3>Email</h3>
+                <p>rafikambiz@gmail.com</p>
+            </div>
+            <div class="contact-item">
+                <h3>Phone</h3>
+                <p> +447999979146</p>
+            </div>
+            <div class="contact-item">
+                <h3>LinkedIn</h3>
+                <p><a href="https://www.linkedin.com/in/kambaiz-rafi-phd-48078138/" target="_blank">LinkedIn Profile</a></p>
+            </div>
+            <div class="contact-item">
+                <h3>WhatsApp</h3>
+                <p> +33782297067</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function toggleNav() {
+            var nav = document.querySelector("nav");
+            var menuIcon = document.getElementById("menu-icon");
+            var content = document.getElementById("content");
+
+            if (nav.style.width === '200px') {
+                nav.style.width = '0';
+                menuIcon.classList.remove("close-icon");
+                content.style.marginLeft = '0';
+            } else {
+                nav.style.width = '200px';
+                menuIcon.classList.add("close-icon");
+                content.style.marginLeft = '200px';
+            }
+        }
+    </script>
+
+</body>
+</html>
