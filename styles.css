@@ -31,11 +31,12 @@ nav a {
     text-decoration: none;
     width: 100%;
     box-sizing: border-box;
-    background-color: #444; /* Background color for menu items */
+    background-color: #555; /* Background color for menu items */
+    transition: background-color 0.3s;
 }
 
 nav a:hover {
-    background-color: #555; /* Background color on hover */
+    background-color: #777; /* Background color on hover */
 }
 
 /* Submenu Styles */
@@ -50,11 +51,12 @@ nav a:hover {
     outline: none;
     color: white;
     padding: 14px 16px;
-    background-color: #444; /* Background color for submenu button */
+    background-color: #555; /* Background color for submenu button */
     font-family: inherit;
     margin: 0;
     width: 100%;
     box-sizing: border-box;
+    transition: background-color 0.3s;
 }
 
 .submenu-content {
@@ -65,22 +67,23 @@ nav a:hover {
 }
 
 .submenu-content li {
-    background-color: #444; /* Background color for submenu items */
+    background-color: #555; /* Background color for submenu items */
 }
 
 .submenu-content a {
     color: white;
-    padding: 8px 16px; /* Smaller padding for submenu items */
+    padding: 10px 16px; /* Smaller padding for submenu items */
     text-decoration: none;
     display: block;
     text-align: center; /* Center the text */
     width: 100%;
     box-sizing: border-box;
-    font-size: 12px; /* Smaller font size for submenu items */
+    font-size: 14px; /* Font size for submenu items */
+    transition: background-color 0.3s;
 }
 
 .submenu-content a:hover {
-    background-color: #555; /* Background color on hover */
+    background-color: #777; /* Background color on hover */
 }
 
 .submenu:hover .submenu-content {
@@ -97,6 +100,11 @@ nav a:hover {
     left: 20px;
     z-index: 2;
     color: white;
+    transition: color 0.3s;
+}
+
+#menu-icon:hover {
+    color: #ccc; /* Change color on hover */
 }
 
 #menu-text {
@@ -108,7 +116,7 @@ nav a:hover {
     margin-left: 0;
     max-width: 800px;
     margin: 20px auto;
-    background-color: white;
+    background-color: #f9f9f9; /* Background color for content */
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
@@ -116,7 +124,7 @@ nav a:hover {
 }
 
 #content h2 {
-    color: black;
+    color: #333;
     border-bottom: 2px solid #ddd;
     padding-bottom: 10px;
     margin-bottom: 10px; /* Add margin at the bottom for spacing */
@@ -124,10 +132,14 @@ nav a:hover {
 
 /* Remove background color for links within the content */
 #content a {
-    background-color: transparent;
-    color:  #0000FF;
+    color: #007BFF; /* Set link color to blue */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s; /* Add transition for color change */
 }
 
+#content a:hover {
+    color: #0056b3; /* Change color to a darker blue on hover */
+}
 
 .image-container {
     display: flex;
@@ -150,26 +162,6 @@ nav a:hover {
     margin-top: 10px;
 }
 
-a {
-    color: #0000FF;!important; /* Set link color to blue */
-    text-decoration: none; /* Remove underline */
-    transition: color 0.3s; /* Add transition for color change */
-}
-
-a:hover {
-    color: #000080; !important;/* Change color to a darker blue on hover */
-}
-
-p a {
-    color: #007BFF; !important;/* Set link color to blue */
-    text-decoration: none; /* Remove underline */
-    transition: color 0.3s; /* Add transition for color change */
-}
-
-p a:hover {
-    color: #0056b3; !important;/* Change color to a darker blue on hover */
-}
-
 /* Style for article boxes on the articles page */
 .article-box {
     border: 1px solid #ddd; /* Add border for article boxes */
@@ -181,6 +173,7 @@ p a:hover {
 /* Style for article titles */
 .article-box h3 {
     color: #333; /* Set color for article titles */
+    margin-bottom: 10px; /* Add margin at the bottom for spacing */
 }
 
 /* Style for article descriptions */
@@ -204,24 +197,7 @@ p a:hover {
     margin-right: 20px; /* Adjust margin as needed */
 }
 
-/* Style for the Buy Link */
-.buy-link {
-    margin-top: 20px; /* Adjust margin as needed */
-}
 
-.buy-link a {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #007BFF; /* Set link color to blue */
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-.buy-link a:hover {
-    background-color: #0056b3; /* Change color to a darker blue on hover */
-}
 
 /* Add this style for right-to-left text */
 .rtl {
@@ -242,6 +218,11 @@ p a:hover {
     padding: 15px;
     background-color: #f0f0f0;
     border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.contact-item:hover {
+    background-color: #e0e0e0; /* Change background color on hover */
 }
 
 .contact-item h3 {
@@ -252,4 +233,72 @@ p a:hover {
 .contact-item p, .contact-item a {
     color: #333;
     margin: 8px 0;
+}
+
+
+
+.book-details {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.book-image {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.book-image img {
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.book-info {
+    flex: 2;
+}
+
+.book-info p {
+    margin-bottom: 10px;
+}
+
+
+
+/* Updated styles for Buy Books Section */
+.buy-books {
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.buy-link {
+    flex: 0 0 calc(30% - 10px);
+    box-sizing: border-box;
+    margin-bottom: 10px; /* Adjust margin-bottom to reduce space between images */
+    text-align: center;
+}
+
+.buy-link img {
+    width: 120px; /* Set a smaller width for the images */
+    height: 120px; /* Set a smaller height for the images */
+    object-fit: contain; /* Maintain aspect ratio without cropping */
+    border-radius: 8px;
+    background: none; /* Set background to none for transparency */
+    transition: transform 0.3s ease-in-out; /* Add transition for a smooth effect */
+}
+
+.buy-link img:hover {
+    transform: scale(1.1); /* Add scale effect on hover */
+}
+
+.buy-link p {
+    font-size: 10px; /* Smaller font size */
+    color: #333;
+    margin-top: 5px; /* Adjust margin */
+    background: none; /* Set background to none for transparency */
+    transition: color 0.3s; /* Add transition for color change on hover */
+}
+
+.buy-link p:hover {
+    color: #007BFF; /* Change color on hover */
 }

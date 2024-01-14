@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Articles</title>
+    <title>English Articles</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-     <header>
+    <header>
         <h1>Dr. Kambaiz Rafi</h1>
         <div id="menu-icon" onclick="toggleNav()">
             &#9776;
@@ -16,13 +16,13 @@
         </div>
     </header>
 
-      <nav>
+   <nav>
         <a href="index.html">Home</a>
         <a href="cv.html">Curriculum vitae</a>
 
         <!-- Articles without icon -->
         <div class="submenu" onclick="toggleSubMenu('articles-submenu')">
-            <button class="submenu-btn">Journal and media articles</button>
+            <button class="submenu-btn">Articles</button>
             <ul class="submenu-content" id="articles-submenu">
                 <li><a href="articles-english.html">English Articles</a></li>
                 <li><a href="articles-persian.html">Persian Articles</a></li>
@@ -33,13 +33,46 @@
         <a href="contact.html">Contact Me</a>
     </nav>
 
+    <div id="content">
+        <h2>Research</h2>
 
 
-    <section id="articles">
-        <p>Choose a category of articles:</p>
-    </section>
+        <div class="article-box">
+            <h3>Peer Reviewed Papers</h3>
+			<p> 2018</p>
+            <i>Information and Communication Technology in development; a contextual approach, Indian Journal of Human Development, 12(3): 453-461</i> 
+			<p> 2015</p>
+            <i>The Afghan insurgency and the uncertainty of peace negotiations, Journal of Perspectives on Terrorism, Centre for Security Studies, University of Massachusetts (Lowell) and ETH Zürich, 9(5): 69-72</i> 
+			<p>
+        </div>
+	
+		<div class="article-box">
+            <h3>Drafted Papers</h3>
+            <i>IMF Policy Template Amid Ongoing Conflict; Explaining Extreme Disjuncture Between Approaches to Economy and Security (Target Journal: World Development)</i> 
+		</div>
+		
+		<div class="article-box">
+            <h3>Policy Paper(s)</h3>
+			<p>2018</p>
+            <i>Afghanistan Sustainable Development Goals Vision 2021-2030, Ministry of Economy of Afghanistan, Government of Afghanistan</i> 
+		</div>
+		
+		
+		<div class="article-box">
+            <h3>Research in Progress</h3>
+			<ul>
+				<li><i>Labour recruitment in a nascent manufacturing sector; evidence from Kabul (Target Journal: Labor Economics)</i></li>
+				<li><i>Use of ICT amid low economies of scale; evidence from Kabul (Target Journal: Information Economics and Policy)</i></li>
+				<li><i>Enabling environment; a new economic policy paradigm? (Target Journal: Institutional Economics)</i></li>		
+		</div>
+		
 
-<script>
+		
+
+
+    </div>
+
+    <script>
         function toggleNav() {
             var nav = document.querySelector("nav");
             var menuIcon = document.getElementById("menu-icon");

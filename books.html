@@ -9,16 +9,16 @@
 <body>
 
 <header>
-        <h1>Kambaiz Rafi</h1>
+        <h1>Dr. Kambaiz Rafi</h1>
         <div id="menu-icon" onclick="toggleNav()">
             &#9776;
             <span id="menu-text">Menu</span>
         </div>
     </header>
 
-    <nav>
+       <nav>
         <a href="index.html">Home</a>
-        <a href="cv.html" download="kambaiz-cv.pdf">Curricuum vitae</a>
+        <a href="cv.html">Curriculum vitae</a>
 
         <!-- Articles without icon -->
         <div class="submenu" onclick="toggleSubMenu('articles-submenu')">
@@ -28,32 +28,74 @@
                 <li><a href="articles-persian.html">Persian Articles</a></li>
             </ul>
         </div>
-
+		<a href ="research.html">Research</a>
         <a href="books.html">Books</a>
         <a href="contact.html">Contact Me</a>
     </nav>
 
-    <div id="content">
-        <!-- Other content on the Books page -->
+<div id="content">
+        <h2>Books</h2>
+
+        <!-- Book Details Section -->
+        <div class="book-details">
+            <div class="book-image">
+                <img src="Cover.jpeg" alt="Book">
+            </div>
+            <div class="book-info">
+                <p>By Dr. Kambaiz Rafi</p>
+                <p>Hard cover ISBN: 978-3-030-98406-9</p>
+				<p>eBook ISBN: 978-3-030-98407-6</p>
+                <p>Publisher: Palgrave Macmillan Cham</p>
+                <p>Publication date: 04 May 2022</p>
+                <p>Pages: 327</p>
+            </div>
+        </div>
 
         <!-- About This Book Section -->
-        <section class="about-book">
-            <h2>About This Book</h2>
-            <div class="book-description">
-                <img src="Cover.jpeg" alt="Book Image">
-                <p>
-                    This book examines the reconstruction of Afghanistan’s economy during the US and international occupation of the country between 2001 and 2021. 
+        <div class="about-book">
+            <h3>About This Book</h3>
+            <p>This book examines the reconstruction of Afghanistan’s economy during the US and international occupation of the country between 2001 and 2021. 
 					Applying an institutionalist framework and based on extensive empirical data, it focuses on resource allocation by private individuals in manufacturing activities. 
 					As such, market-oriented policy adopted in this period is analysed to highlight its suitability in such a context for achieving relatively better and more productive resource allocation.
                     The book underscores ‘socially contingent knowledge’ and its role in private resource allocation where the private sector’s involvement is fledgling, bringing out the limitations and possibilities that this feature entails.
 					It raises important questions and deals with problems that are relevant to contemporary debates in economics and political economy of development.
-                </p>
-            </div>
+			</p>
+
+        </div>
+
+	<h2> Buy a copy</h2>
+        <!-- Buy Books Section -->
+        <div class="buy-books">
+			<br>
             <div class="buy-link">
-                <a href="https://link.springer.com/book/10.1007/978-3-030-98407-6" target="_blank">More Information</a>
+                <a href="https://link.springer.com/book/10.1007/978-3-030-98407-6#about-this-book" target="_blank">
+                    <img src="media/springer.png" alt="Springer Link">
+                </a>
+				<br>
+				<br>
+				<a href="https://www.amazon.co.uk/Patriarchal-Hierarchy-Capitalism-Production-Afghanistan/dp/3030984060" target="_blank">
+                    <img src="media/amazon.png" alt="Amazon">
+                </a>
+			
             </div>
-        </section>
-    </div>
+			 <div class="buy-link">
+                <a href="https://www.ebay.com/itm/386091774071" target="_blank">
+                    <img src="media/ebay.png" alt="Ebay">
+                </a>
+				<br>
+				<br>
+				 <a href="https://shop.harvard.com/book/9783030984069" target="_blank">
+                    <img src="media/harvard.png" alt="Harvard store & Noble">
+                </a>
+            </div>
+
+
+			
+			
+			
+            <!-- Add more buy-link divs for additional sites -->
+        </div>
+
 
    <script>
         function toggleNav() {
